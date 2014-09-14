@@ -1,0 +1,8 @@
+name: VOICE_MAIN_LOBBY
+main: me.nathan.voice.MainLobbby
+version: 1.0
+description: >
+             VOICE_MAIN_LOBBY
+commands:
+  nav:
+    description: Opens the nav menu!

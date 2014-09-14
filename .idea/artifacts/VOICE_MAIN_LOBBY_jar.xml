@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="VOICE_MAIN_LOBBY:jar">
+    <output-path>$USER_HOME$/Desktop/SERVERS/testing/plugins</output-path>
+    <root id="archive" name="VOICE_MAIN_LOBBY.jar">
+      <element id="module-output" name="VOICE_MAIN_LOBBY" />
+    </root>
+  </artifact>
+</component>
