@@ -6,3 +6,5 @@ description: >
 commands:
   nav:
     description: Opens the nav menu!
+  seththing:
+    description: Seth thing!

@@ -7,15 +7,16 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.player.PlayerInventoryEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.event.player.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitScheduler;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -24,6 +25,7 @@ import java.util.logging.Logger;
 public class MainLobbby extends JavaPlugin  implements Listener{
     public final Logger logger = Logger.getLogger("Minecraft");
     public static MainLobbby plugin;
+    public int parpos = 0;
     public void onEnable(){
         PluginDescriptionFile pdfFile = this.getDescription();
         this.logger.info(ChatColor.GREEN +(pdfFile.getName() + " Version " +  pdfFile.getVersion() +" :Has Been Enabled"));
@@ -33,7 +35,7 @@ public class MainLobbby extends JavaPlugin  implements Listener{
     @EventHandler
     public void join(PlayerJoinEvent event) {
         event.setJoinMessage(null);
-        Player player = event.getPlayer();
+        final Player player = event.getPlayer();
 
         player.getInventory().clear();
 
@@ -47,6 +49,15 @@ public class MainLobbby extends JavaPlugin  implements Listener{
         Location spawn = new Location(player.getWorld(), x, y, z);
         player.teleport(spawn);
 
+        ItemStack head = new ItemStack(Material.SKULL_ITEM,1,(byte)3);
+        SkullMeta headm = (SkullMeta)head.getItemMeta();
+        headm.setOwner("kylewong178849");
+        head.setItemMeta(headm);
+        player.getInventory().setHelmet(head);
+
+        if(player.getName()=="162cooperR"){
+
+        }
 
     }
 
@@ -56,11 +67,55 @@ public class MainLobbby extends JavaPlugin  implements Listener{
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String commandLabel, String[] args) {
-        Player player = (Player) sender;
+        final Player player = (Player) sender;
        if(commandLabel.equalsIgnoreCase("nav")){
         openNav(player);
 
-       }
+       }else if(commandLabel.equalsIgnoreCase("seththing")){
+           BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
+           scheduler.scheduleSyncRepeatingTask(this,new Runnable() {
+               public void run() {
+                   parpos++;
+                   if(parpos==1){
+                       ParticleEffect.NOTE.display(player.getLocation().add(0,2,0),2,2,2,10,20);
+                       ParticleEffect.NOTE.display(player.getLocation().add(1,2,0),2,2,2,10,20);
+                       ParticleEffect.NOTE.display(player.getLocation().add(2,2,0),2,2,2,10,20);
+                       ParticleEffect.NOTE.display(player.getLocation().add(3,2,0),2,2,2,10,20);
+                       ParticleEffect.NOTE.display(player.getLocation().add(0,2,1),2,2,2,10,20);
+                   }
+                   if(parpos==2){
+
+                   }
+                   if(parpos==3){
+
+                   }
+                   if(parpos==4){
+
+                   }
+                   if(parpos==5){
+
+                   }
+                   if(parpos==6){
+
+                   }
+                   if(parpos==7){
+
+                   }
+                   if(parpos==8){
+
+                   }
+                   if(parpos==9){
+
+                   }
+                   if(parpos==10){
+
+                   }
+                   if(parpos==11){
+                       parpos=1;
+                   }
+               }
+           },0l,5l);
+        }
         return false;
     }
 
@@ -142,6 +197,14 @@ public class MainLobbby extends JavaPlugin  implements Listener{
             sendToServer(player, "factions");
         }
     }
+    @EventHandler
+    public void onAction(PlayerInteractEvent event){
+        Action a = event.getAction();
+        ItemStack is = event.getItem();
+        if(a== Action.PHYSICAL || is == null || is.getType()== Material.AIR){
+            return;
+        }
+    }
 
     public void sendToServer(Player player, String targetServer){
 
@@ -172,6 +235,19 @@ public class MainLobbby extends JavaPlugin  implements Listener{
         }
     }
 }
+
+    @EventHandler
+    public void onRespawn(PlayerRespawnEvent event){
+        Player player = event.getPlayer();
+        int x;
+        int y;
+        int z;
+        x =0;
+        y=67;
+        z=2;
+        Location spawn = new Location(player.getWorld(), x, y, z);
+        player.teleport(spawn);
+    }
 
     }
 
