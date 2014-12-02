@@ -39,6 +39,9 @@ public class MainLobbby extends JavaPlugin  implements Listener{
     private Scoreboard board;
     private Objective o;
     private Score s;
+    /**
+     * Added gitignore
+     * */
 
     public void onEnable(){
         board = Bukkit.getServer().getScoreboardManager().getNewScoreboard();
