@@ -10,18 +10,38 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/Bukkit and CB LATEST BUILDS/bukkit-1.7.10-R0.1-20140808.005150-4.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/TabAPI.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/Downloads/TabAPI.jar!/doc" />
+        </JAVADOC>
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/Programming server/bukkit-1.7.10-R0.1-20140808.005150-4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$USER_HOME$/Desktop/Bukkit and CB LATEST BUILDS/bukkit-1.7.10-R0.1-20140808.005150-4.jar!/" />
+          <root url="jar://$USER_HOME$/Desktop/Programming server/bukkit-1.7.10-R0.1-20140808.005150-4.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/SERVERS/testing/plugins/ProtocolLib-3.4.0 (1).jar!/" />
+          <root url="jar://$USER_HOME$/Desktop/SERVERS/testing/plugins/Voic3API.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Documents/Coding/Java/Bukkit/Api`s/javax.mail.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

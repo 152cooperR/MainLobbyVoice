@@ -4,7 +4,11 @@ version: 1.0
 description: >
              VOICE_MAIN_LOBBY
 commands:
-  nav:
-    description: Opens the nav menu!
-  seththing:
-    description: Seth thing!
+  f:
+    description: Shoots fireworks!
+  lobby:
+    description: Sends you to the desired lobby!
+  test:
+    description: Sends you to the desired lobby!
+
+
