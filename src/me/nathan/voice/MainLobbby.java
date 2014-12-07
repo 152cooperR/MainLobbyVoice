@@ -40,7 +40,7 @@ public class MainLobbby extends JavaPlugin  implements Listener{
     private Objective o;
     private Score s;
     /**
-     * Added gitignore
+     * Added gitignore.
      * */
 
     public void onEnable(){
