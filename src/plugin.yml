@@ -1,14 +1,8 @@
-name: VOICE_MAIN_LOBBY
+name: V3_Main_Lobby
 main: me.nathan.voice.MainLobbby
 version: 1.0
 description: >
              VOICE_MAIN_LOBBY
 commands:
-  f:
-    description: Shoots fireworks!
-  lobby:
-    description: Sends you to the desired lobby!
-  test:
-    description: Sends you to the desired lobby!
-
-
+  snow:
+    description: Toggles snow on/off.
