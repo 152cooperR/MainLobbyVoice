@@ -282,7 +282,7 @@ public class MainLobbby extends JavaPlugin  implements Listener{
 
 
     @EventHandler
-    public void onBlockIgnite(BlockIgniteEvent event) {
+    public void onBlockIgnite(BlockIgniteEvent event ) {
         if (event.getCause() == BlockIgniteEvent.IgniteCause.LIGHTNING) {
             event.setCancelled(true);
         }
